@@ -29,14 +29,30 @@
 
 .boxRight {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     width: 40%;
-    height: 100px;
     background-color: colorSchema.$box-color;
-    padding: 32px;
+    padding: 48px;
+    font-style: italic;
 }
 
 .title {
     font-size: 28px;
     color: rgb(102, 102, 102);
+}
+
+.subTitle {
+    width: 100%;
+    color: colorSchema.$secondary-color;
+    border-bottom: 1.5px solid colorSchema.$primary-color;
+}
+
+.valueText {
+    color: colorSchema.$primary-color;
+    font-size: 18px;
+}
+
+.valuePrice {
+    color: colorSchema.$secondary-color;
 }

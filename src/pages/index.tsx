@@ -24,7 +24,11 @@ export default function Home() {
                     </Form>
                 </section>
                 <section className={styles.boxRight}>
-                    
+                    <h3 className={styles.subTitle}>VOCÊ RECEBERÁ:</h3>
+                    <p className={styles.valueText}>Amanhã: <span className={styles.valuePrice}>{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valuesArray[0])}</span></p>
+                    <p className={styles.valueText}>Em 15 dias: <span className={styles.valuePrice}>{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valuesArray[1])}</span></p>
+                    <p className={styles.valueText}>Em 30 dias: <span className={styles.valuePrice}>{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valuesArray[2])}</span></p>
+                    <p className={styles.valueText}>Em 90 dias: <span className={styles.valuePrice}>{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valuesArray[3])}</span></p>
                 </section>
             </div>
 

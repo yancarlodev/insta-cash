@@ -28,7 +28,13 @@ export const handleSubmit = (formData: IFormData, setIsLoading: (state: boolean)
         setValuesArray(dayArray)
     })
     .catch((error) => {
-        errorToast(error?.response?.data?.message ? `${error?.response?.data?.message}!` : 'Um erro ocorreu, por favor, tente novamente!')
+        if(error.response.status === 408) {
+            errorToast('Limite de tempo extrapolado!')
+        } else if(error.response.status === 500) {
+            errorToast('Ocorreu um erro no servidor, tente novamente mais tarde!')
+        } else {
+            errorToast(error?.response?.data?.message ? `${error?.response?.data?.message}!` : 'Um erro ocorreu, por favor, tente novamente!')
+        }
     })
     .finally(() => {
         setIsLoading(false)
