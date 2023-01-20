@@ -1,4 +1,4 @@
-@use 'colorSquema';
+@use 'colorSchema';
 
 .container {
     display: flex;
@@ -6,21 +6,25 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: colorSquema.$background-color;
+    background-color: colorSchema.$background-color;
 }
 
 .boxContainer {
     display: flex;
     border: 2px solid rgb(216, 216, 216);
-    border-radius: 4px;
+    border-radius: 6px;
     width: 50vw;
+    overflow: hidden;
 }
 
 .boxLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 60%;
-    height: 100px;
-    background-color: colorSquema.$secondary-box-color;
-    padding: 40px 48px;
+    background-color: colorSchema.$secondary-box-color;
+    padding: 48px 56px;
+    gap: 32px;
 }
 
 .boxRight {
@@ -28,6 +32,11 @@
     align-items: center;
     width: 40%;
     height: 100px;
-    background-color: colorSquema.$box-color;
+    background-color: colorSchema.$box-color;
     padding: 32px;
+}
+
+.title {
+    font-size: 28px;
+    color: rgb(102, 102, 102);
 }

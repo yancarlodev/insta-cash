@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify'
 
-export const errorToast = (message: string) => {
-    toast.error(message, {
+export const successToast = (message: string) => {
+    toast.success(message, {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -9,6 +9,6 @@ export const errorToast = (message: string) => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "dark",
+        theme: "light",
     })
 } 

@@ -1,0 +1,32 @@
+@use '../../styles/colorSchema';
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #00000099;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 10px solid colorSchema.$background-color;
+    border-top-color: colorSchema.$secondary-color;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}

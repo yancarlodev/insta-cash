@@ -1,0 +1,30 @@
+@use '../../styles/colorSchema.scss';
+
+.input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 2px solid rgb(219, 219, 219);
+    margin-top: 4px;
+}
+
+.input:focus {
+    outline-color: colorSchema.$primary-color;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    color: rgb(107, 107, 107);
+}
+
+.sublabel {
+    font-size: 14px;
+    margin: 4px 0px 0px 0px;
+    color: rgb(165, 165, 165);
+}
+
+.error {
+    font-size: 14px;
+    color: rgb(218, 60, 60);
+}
